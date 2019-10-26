@@ -1,4 +1,7 @@
 {
+  "scripts": {
+   "generator:ts": "openapi-generator generate -i ./reference/books/books.yaml -g typescript-axios"
+  },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^1.0.1-4.1.3"
   }
