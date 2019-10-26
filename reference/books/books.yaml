@@ -26,8 +26,7 @@ paths:
     parameters: []
   '/books/{isbn}':
     parameters:
-      - type: string
-        name: isbn
+      - name: isbn
         in: path
         required: true
         schema:
@@ -46,8 +45,7 @@ paths:
           description: Not Implemented
   '/books/{isbn}/actions':
     parameters:
-      - type: string
-        name: isbn
+      - name: isbn
         in: path
         required: true
     post:
