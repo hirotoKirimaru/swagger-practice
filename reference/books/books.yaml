@@ -38,10 +38,6 @@ paths:
         name: isbn
         in: path
         required: true
-    get:
-      summary: Your GET endpoint
-      tags: []
-      responses: {}
     post:
       summary: ''
       responses:
@@ -63,5 +59,6 @@ paths:
                   type: borrow
                   userId: '1234567'
         description: ''
+      description: ''
 components:
   schemas: {}
