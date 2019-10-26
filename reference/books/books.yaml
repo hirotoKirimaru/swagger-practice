@@ -61,11 +61,11 @@ paths:
             schema:
               $ref: ./models/bookaction.v1.yaml
             examples:
-              本を借りる:
+              borrow:
                 value:
                   type: borrow
                   userId: '1234567'
-              本を返す:
+              return:
                 value:
                   type: return
                   userId: '1234567'
