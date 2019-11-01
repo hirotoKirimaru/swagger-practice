@@ -12,8 +12,11 @@ tags:
     description: ""
   - name: users
     description: ""
+  - name: openBd
 paths:
   /books:
     $ref: './paths/books.yaml#/books'
-  /books-by-isbn:
-    $ref: './paths/books-by-isbn.yaml#/isbn'
+  '/books/{isbn}':
+    $ref: './paths/books.yaml#/isbn'
+  /books-by-actions:
+    $ref: './paths/books.yaml#/actions'

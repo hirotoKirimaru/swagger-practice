@@ -18,6 +18,7 @@ isbn:
       responses:
         '501':
           description: Not Implemented
+actions:
   '/books/{isbn}/actions':
     parameters:
       - name: isbn
