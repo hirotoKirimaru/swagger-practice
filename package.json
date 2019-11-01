@@ -1,9 +1,20 @@
 {
   "scripts": {
-   "generator:ts": "openapi-generator generate -i ./reference/books/books.yaml -g typescript-axios -o ./client/generated",
-   "generator:java": "openapi-generator generate -i ./reference/books/books.yaml -g spring -o ./server/generated"
+    "generator": "openapi-generator generate --help ",
+    "generator:t": "openapi-generator generate -i ./reference/external/openBd.yaml -g typescript-axios -o ./client/generated --api-package external",
+    "pet": "openapi-generator generate -i reference/paths/petstore.yaml -g typescript-axios -o ./client/generated --api-package external",
+    "gen": "openapi-generator generate -i reference/index.yaml -g typescript-axios -o ./client/generated --api-package external",
+
+
+
+
+
+   "generator:ts": "openapi-generator generate -i ./reference/external/openBd.yaml -g typescript-axios -o ./client/generated",
+   "generator:java": "openapi-generator generate -i reference/paths/books.yaml -g spring -o ./server/generated"
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^1.0.1-4.1.3"
   }
 }
+
+

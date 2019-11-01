@@ -1,0 +1,19 @@
+books:
+  tags:
+    - books
+  get:
+    summary: 本を検索する
+    responses:
+      '200':
+        description: OK
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                books:
+                  anyOf:
+                    - type: array
+                      items: {}
+                    - $ref: ./difinitions/books.v1.yaml
+  parameters: []

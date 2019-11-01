@@ -11,7 +11,7 @@ servers:
 # host: "https://api.openbd.jp/"
 # basePath: "v1"
 tags:
-  - name: "default"
+  - name: "openBd"
     description: "ドキュメントルート"
 paths:
   /get:

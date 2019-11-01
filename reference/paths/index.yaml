@@ -1,0 +1,7 @@
+tags:
+  - name: books
+  - name: lendingRecords
+  - name: users
+paths:
+  /books:
+    $ref: 'books.yaml'
