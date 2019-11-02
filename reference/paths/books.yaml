@@ -27,7 +27,7 @@ isbn:
       description: ''
   put:
     tags:
-      - books
+      - booksIsbn
     summary: 本を登録する
     responses:
       '501':
@@ -39,31 +39,32 @@ isbn:
       '501':
         description: Not Implemented
 actions:
-  '/books/{isbn}/actions':
-    parameters:
-      - name: isbn
-        in: path
-        required: true
-    post:
-      summary: 本に対する行動
-      responses:
-        '200':
-          description: OK
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: ./difinitions/bookaction.v1.yaml
-            examples:
-              borrow:
-                value:
-                  type: borrow
-                  userId: '1234567'
-              return:
-                value:
-                  type: return
-                  userId: '1234567'
-        description: パラメータのISBNの
-      description: ''
-      parameters: []
+  parameters:
+    - name: isbn
+      in: path
+      required: true
+  post:
+    tags:
+      - booksIsbnActions
+    summary: 本に対する行動
+    responses:
+      '200':
+        description: OK
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: ./difinitions/bookaction.v1.yaml
+          examples:
+            borrow:
+              value:
+                type: borrow
+                userId: '1234567'
+            return:
+              value:
+                type: return
+                userId: '1234567'
+      description: パラメータのISBNの
+    description: ''
+    parameters: []
 
